@@ -1,4 +1,4 @@
-package org.example.mio;
+package org.example.mio.Conect;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,10 +10,7 @@ public class DBConect {
         Connection con = null;
         try {
             con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbc_vacas", "root", "041130");
-            if (con != null) {
-                System.out.println("Connection Exitosa");
-                return con;
-            }
+
         } catch (SQLException e) {
             System.out.println("HUBO UN ERROR " + e);
 
